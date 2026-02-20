@@ -18,11 +18,13 @@ interface CartItem {
 export default function App() {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isCartOpen, setIsCartOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(true);
 
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
 
+  const toggleTheme = () => setIsDarkMode(!isDarkMode);
   const toggleCart = () => setIsCartOpen(!isCartOpen);
 
   const addToCart = (name: string, price: number) => {
@@ -43,26 +45,46 @@ export default function App() {
     setCart((prevCart) => prevCart.filter((item) => item.name !== name));
   };
 
+  const updateQty = (name: string, delta: number) => {
+    setCart((prevCart) => {
+      return prevCart.map((item) => {
+        if (item.name === name) {
+          const newQty = Math.max(1, item.qty + delta);
+          return { ...item, qty: newQty };
+        }
+        return item;
+      });
+    });
+  };
+
   const cartCount = cart.reduce((acc, item) => acc + item.qty, 0);
 
   return (
-    <div className="overflow-x-hidden font-sans text-gray-100 bg-[#080808]">
-      <Cursor />
-      <div className="noise-bg"></div>
-      
-      <Navbar cartCount={cartCount} toggleCart={toggleCart} />
-      
-      <Hero />
-      <DropSection addToCart={addToCart} />
-      <Manifesto />
-      <Footer />
-      
-      <CartDrawer
-        isOpen={isCartOpen}
-        toggleCart={toggleCart}
-        cart={cart}
-        removeItem={removeItem}
-      />
+    <div className={`${isDarkMode ? 'dark' : ''}`}>
+      <div className="overflow-x-hidden font-sans text-gray-900 bg-gray-100 dark:text-gray-100 dark:bg-[#080808] min-h-screen transition-colors duration-300">
+        <Cursor />
+        <div className="noise-bg"></div>
+        
+        <Navbar 
+          cartCount={cartCount} 
+          toggleCart={toggleCart} 
+          isDarkMode={isDarkMode} 
+          toggleTheme={toggleTheme} 
+        />
+        
+        <Hero />
+        <DropSection addToCart={addToCart} />
+        <Manifesto />
+        <Footer />
+        
+        <CartDrawer
+          isOpen={isCartOpen}
+          toggleCart={toggleCart}
+          cart={cart}
+          removeItem={removeItem}
+          updateQty={updateQty}
+        />
+      </div>
     </div>
   );
 }

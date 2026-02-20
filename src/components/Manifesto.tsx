@@ -2,16 +2,16 @@ export default function Manifesto() {
   return (
     <section
       id="manifesto"
-      className="bg-white text-black py-20 md:py-28 overflow-hidden relative"
+      className="bg-white dark:bg-zinc-900 text-black dark:text-white py-20 md:py-28 overflow-hidden relative transition-colors duration-300"
     >
-      <div className="absolute top-10 right-0 font-brutal text-[20vw] md:text-[12vw] leading-none opacity-[0.04] pointer-events-none select-none translate-x-1/4 -rotate-12 md:rotate-0">
+      <div className="absolute top-10 right-0 font-brutal text-[20vw] md:text-[12vw] leading-none opacity-[0.04] dark:opacity-[0.02] pointer-events-none select-none translate-x-1/4 -rotate-12 md:rotate-0 transition-opacity duration-300">
         PROTEST
       </div>
 
       <div className="container mx-auto px-6 relative">
         <div className="flex flex-col md:flex-row items-center gap-16 md:gap-24">
           <div className="w-full md:w-[40%] relative" data-aos="zoom-in-up">
-            <div className="relative z-10 overflow-hidden border-[6px] md:border-[10px] border-black aspect-[4/3] shadow-[20px_20px_0px_0px_rgba(0,0,0,0.05)]">
+            <div className="relative z-10 overflow-hidden border-[6px] md:border-[10px] border-black dark:border-white/10 aspect-[4/3] shadow-[20px_20px_0px_0px_rgba(0,0,0,0.05)] dark:shadow-none transition-all duration-300">
               <img
                 src="https://image-cdn.hypb.st/https%3A%2F%2Fid.hypebeast.com%2Ffiles%2F2025%2F01%2F13%2Fdirty-business-comeback-dengan-dirty-sport-series-collection-7.jpg?q=75&w=800&cbr=1&fit=max"
                 className="w-full h-full object-cover grayscale active:grayscale-0 md:hover:grayscale-0 transition-all duration-700"
@@ -36,16 +36,16 @@ export default function Manifesto() {
 
             <h2 className="font-brutal text-5xl md:text-7xl mb-6 leading-[0.85] tracking-tighter">
               THE BRUTAL<br />
-              <span className="italic text-gray-300 md:text-gray-400">MANIFESTO</span>
+              <span className="italic text-gray-300 md:text-gray-600 transition-colors duration-300">MANIFESTO</span>
             </h2>
 
-            <p className="text-sm md:text-lg leading-relaxed mb-8 md:mb-10 max-w-lg text-zinc-700">
+            <p className="text-sm md:text-lg leading-relaxed mb-8 md:mb-10 max-w-lg text-zinc-700 dark:text-zinc-300 transition-colors duration-300">
               We don't design for everyone.
-              <span className="bg-black text-white px-1.5 py-0.5 inline-block -rotate-1 mx-1">
+              <span className="bg-black dark:bg-white text-white dark:text-black px-1.5 py-0.5 inline-block -rotate-1 mx-1 transition-colors duration-300">
                 BesokLagi™
               </span>
               is a protest against the speed that kills originality.
-              <span className="block mt-4 text-zinc-400 italic text-xs md:text-sm">
+              <span className="block mt-4 text-zinc-400 dark:text-zinc-500 italic text-xs md:text-sm transition-colors duration-300">
                 "We are not always online. But when we are, we shape the future."
               </span>
             </p>
@@ -57,7 +57,7 @@ export default function Manifesto() {
               <div className="grid grid-cols-2 md:flex md:flex-wrap gap-3 md:gap-8">
                 <a
                   href="#"
-                  className="flex items-center justify-center md:justify-start gap-3 p-3 md:p-0 border border-black/5 md:border-none rounded-sm active:bg-zinc-50 transition-all"
+                  className="flex items-center justify-center md:justify-start gap-3 p-3 md:p-0 border border-black/5 dark:border-white/5 md:border-none rounded-sm active:bg-zinc-50 dark:active:bg-zinc-800 transition-all"
                 >
                   <i className="fa-solid fa-bag-shopping text-lg md:text-xl text-orange-500"></i>
                   <span className="font-bold text-[10px] md:text-xs uppercase tracking-widest border-b-2 border-orange-500/20 md:border-orange-500">
@@ -66,7 +66,7 @@ export default function Manifesto() {
                 </a>
                 <a
                   href="#"
-                  className="flex items-center justify-center md:justify-start gap-3 p-3 md:p-0 border border-black/5 md:border-none rounded-sm active:bg-zinc-50 transition-all"
+                  className="flex items-center justify-center md:justify-start gap-3 p-3 md:p-0 border border-black/5 dark:border-white/5 md:border-none rounded-sm active:bg-zinc-50 dark:active:bg-zinc-800 transition-all"
                 >
                   <i className="fa-solid fa-store text-lg md:text-xl text-green-500"></i>
                   <span className="font-bold text-[10px] md:text-xs uppercase tracking-widest border-b-2 border-green-500/20 md:border-green-500">
@@ -75,7 +75,7 @@ export default function Manifesto() {
                 </a>
                 <a
                   href="#"
-                  className="col-span-2 md:col-span-1 flex items-center justify-center md:justify-start gap-3 p-3 md:p-0 border border-black/5 md:border-none rounded-sm active:bg-zinc-50 transition-all"
+                  className="col-span-2 md:col-span-1 flex items-center justify-center md:justify-start gap-3 p-3 md:p-0 border border-black/5 dark:border-white/5 md:border-none rounded-sm active:bg-zinc-50 dark:active:bg-zinc-800 transition-all"
                 >
                   <i className="fa-brands fa-instagram text-lg md:text-xl text-pink-500"></i>
                   <span className="font-bold text-[10px] md:text-xs uppercase tracking-widest border-b-2 border-pink-500/20 md:border-pink-500">
@@ -87,12 +87,12 @@ export default function Manifesto() {
 
             <a
               href="#"
-              className="group relative flex md:inline-flex items-center justify-between md:justify-start gap-6 overflow-hidden border border-black/10 md:border-none p-4 md:p-0"
+              className="group relative flex md:inline-flex items-center justify-between md:justify-start gap-6 overflow-hidden border border-black/10 dark:border-white/10 md:border-none p-4 md:p-0 transition-colors duration-300"
             >
-              <span className="font-bold uppercase text-[10px] md:text-xs tracking-[0.2em] md:border-b md:border-black/10 md:pb-1 group-hover:border-blue-600 transition-colors">
+              <span className="font-bold uppercase text-[10px] md:text-xs tracking-[0.2em] md:border-b md:border-black/10 dark:md:border-white/10 md:pb-1 group-hover:border-blue-600 transition-colors">
                 Read Our Story
               </span>
-              <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-black rounded-full group-hover:bg-black group-hover:text-white transition-all duration-500">
+              <div className="flex items-center justify-center w-10 h-10 md:w-12 md:h-12 border border-black dark:border-white rounded-full group-hover:bg-black group-hover:text-white dark:group-hover:bg-white dark:group-hover:text-black transition-all duration-500">
                 <i className="fa-solid fa-arrow-right -rotate-45 group-hover:rotate-0 transition-transform"></i>
               </div>
             </a>

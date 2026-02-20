@@ -18,11 +18,11 @@ export default function Hero() {
   return (
     <section
       id="hero-trigger"
-      className="relative min-h-screen flex items-center justify-center pt-24 pb-32 overflow-hidden bg-[#050505]"
+      className="relative min-h-screen flex items-center justify-center pt-24 pb-32 overflow-hidden bg-gray-100 dark:bg-[#050505] transition-colors duration-300"
     >
       <div className="absolute inset-0 pointer-events-none overflow-hidden select-none z-0">
         <h2
-          className="parallax-layer absolute top-10 left-[-2%] text-[12rem] md:text-[18rem] font-black text-white/[0.10] font-brutal leading-none"
+          className="parallax-layer absolute top-10 left-[-2%] text-[12rem] md:text-[18rem] font-black text-black/[0.03] dark:text-white/[0.10] font-brutal leading-none transition-colors duration-300"
           data-speed="-0.5"
         >
           01
@@ -33,7 +33,7 @@ export default function Hero() {
           data-speed="1.5"
         ></div>
 
-        <div className="absolute bottom-[20%] left-0 w-full opacity-[0.10] font-brutal text-2xl md:text-3xl whitespace-nowrap animate-marquee tracking-[0.4em] uppercase italic select-none">
+        <div className="absolute bottom-[20%] left-0 w-full opacity-[0.10] font-brutal text-2xl md:text-3xl whitespace-nowrap animate-marquee tracking-[0.4em] uppercase italic select-none text-black dark:text-white transition-colors duration-300">
           URBAN SURVIVAL KIT — NO COMPROMISE — FUTURE IS LATE — IDENTITY FRAGMENT —
         </div>
       </div>
@@ -42,7 +42,7 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-12 lg:gap-20">
           <div className="w-full md:w-7/12 flex flex-col items-start">
             <div
-              className="inline-flex items-center gap-2 px-3 py-1 bg-blue-600 text-[10px] font-bold tracking-[0.4em] uppercase mb-8 shadow-lg shadow-blue-600/20"
+              className="inline-flex items-center gap-2 px-3 py-1 bg-blue-600 text-white text-[10px] font-bold tracking-[0.4em] uppercase mb-8 shadow-lg shadow-blue-600/20"
               data-aos="fade-down"
             >
               <span className="w-1.5 h-1.5 bg-white rounded-full animate-pulse"></span>
@@ -75,11 +75,11 @@ export default function Hero() {
             </h1>
 
             <div
-              className="max-w-xs md:ml-24 border-l-2 border-white/10 pl-6 py-2"
+              className="max-w-xs md:ml-24 border-l-2 border-black/10 dark:border-white/10 pl-6 py-2 transition-colors duration-300"
               data-aos="fade-up"
               data-aos-delay="500"
             >
-              <p className="text-gray-400 text-sm md:text-[15px] leading-relaxed mb-8 font-light">
+              <p className="text-gray-600 dark:text-gray-400 text-sm md:text-[15px] leading-relaxed mb-8 font-light transition-colors duration-300">
                 Born from the city’s chaos. Raw streetwear for the ones who don't seek permission.
                 <span className="text-blue-500/60 block mt-2 uppercase tracking-widest text-[10px] font-bold">
                   Limited Edition 01/50
@@ -88,7 +88,7 @@ export default function Hero() {
 
               <a
                 href="#drop"
-                className="group relative inline-flex items-center gap-6 py-4 px-8 border border-white/20 hover:border-blue-600 transition-all duration-500 overflow-hidden bg-white/5 backdrop-blur-md"
+                className="group relative inline-flex items-center gap-6 py-4 px-8 border border-black/20 dark:border-white/20 hover:border-blue-600 transition-all duration-500 overflow-hidden bg-black/5 dark:bg-white/5 backdrop-blur-md text-black dark:text-white"
               >
                 <span className="text-[10px] font-bold uppercase tracking-[0.3em] relative z-10">
                   Explore Identity
@@ -111,14 +111,14 @@ export default function Hero() {
               <span className="font-brutal text-[8px] md:text-sm">330GSM COTTON</span>
             </div>
 
-            <div className="relative p-1.5 md:p-2 border border-white/5 md:border-white/10 bg-zinc-900/20 md:bg-zinc-900/30 backdrop-blur-sm md:backdrop-blur-md group">
+            <div className="relative p-1.5 md:p-2 border border-black/5 dark:border-white/5 bg-white/20 dark:bg-zinc-900/20 backdrop-blur-sm md:backdrop-blur-md group transition-colors duration-300">
               <div className="relative overflow-hidden w-[65vw] md:w-[300px] lg:w-[360px] aspect-[3/4]">
                 <img
                   src="https://images.unsplash.com/photo-1552374196-1ab2a1c593e8"
                   alt="Streetwear Hero"
                   className="w-full h-full object-cover grayscale transition-all duration-1000 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-black/60 md:bg-transparent md:bg-gradient-to-t md:from-black/60 md:via-transparent md:to-transparent"></div>
+                <div className="absolute inset-0 bg-white/10 dark:bg-black/60 md:bg-transparent md:bg-gradient-to-t md:from-black/60 md:via-transparent md:to-transparent transition-colors duration-300"></div>
               </div>
             </div>
           </div>
